@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet"href="style.css">
+    <title>TODOLIST</title>
+</head>
+<body>
+    <h1>TODOLIST</h1>
+    
+        <div class="container">
+            <div class="content"></div>
+    <input id="input" placeholder="Enter your Routine ">
+    <input type="date" id="date" placeholder="Enter a date">
+    <button onclick="add()">ADD</button>
+    <ul id="list-container">
+      
+    </ul>
+</div> 
+    <script>
+        var ul=document.getElementById('list-container')
+        var input=document.getElementById('input')
+        var calender=document.getElementById(date)
+
+        function add(){
+            var listitem=document.createElement('li')
+            // var date=document.createElement(date)
+    
+            listitem.innerHTML=input.value +date.value+"<button onclick='deleteItem(event)'>Delete</button>"
+            ul.append(listitem)
+            input.value=''  
+
+            ul.append(listitem)
+        }
+    
+          function deleteItem(event){   
+            event.target.parentElement.remove()
+        }
+    </script>
+
+
+    
+</body>
+</html>
